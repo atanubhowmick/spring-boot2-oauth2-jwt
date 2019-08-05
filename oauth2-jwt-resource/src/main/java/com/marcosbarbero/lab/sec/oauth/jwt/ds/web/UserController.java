@@ -14,8 +14,8 @@ public class UserController {
 
     @GetMapping
     @PreAuthorize("hasRole('ROLE_USER')")
-    public ResponseEntity<Principal> get(final Principal principal) {
-        return ResponseEntity.ok(principal);
+    public ResponseEntity<String> get() {
+        return ResponseEntity.ok("Hi Atanu");
     }
 
 }
